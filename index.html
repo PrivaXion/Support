@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrivaXion Support Forum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="navbar">
+        <div class="logo-container">
+            <span class="logo-icon">🛡️</span>
+            <span class="logo-text">PrivaXion <small>Support</small></span>
+        </div>
+        <div id="user-profile-bar" class="user-profile">
+            <!-- Динамически заполнится через JS -->
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Левая колонка: Категории -->
+        <aside class="sidebar">
+            <h3>Разделы</h3>
+            <ul>
+                <li class="active">🔥 Все обращения</li>
+                <li>🐛 Багрепорты</li>
+                <li>💡 Идеи и Фичи</li>
+                <li>📜 Правила & FAQ</li>
+            </ul>
+        </aside>
+
+        <!-- Правая колонка: Контент -->
+        <section class="feed">
+            <!-- Форма создания обращения -->
+            <div class="card create-post">
+                <h4>Создать новое обращение</h4>
+                <input type="text" id="ticket-title" placeholder="Тема обращения...">
+                <textarea id="ticket-body" placeholder="Опишите проблему или предложение..."></textarea>
+                <button onclick="createTicket()" class="btn-primary">Опубликовать</button>
+            </div>
+
+            <!-- Список постов -->
+            <div id="posts-list">
+                <!-- Сюда подгружаются тикеты -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
